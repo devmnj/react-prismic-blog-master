@@ -18,6 +18,8 @@
     "react-scripts": "^1.1.5",
     "web-vitals": "^1.0.1"
   },
+  "env":{ 
+  "CI": false},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
