@@ -21,12 +21,11 @@ class Slices extends React.Component {
     if (this.props.slices) {
       const pageContent = this.props.slices.map((slice, index) => {
         if (slice.slice_type === "heading_slice") {
-          console.log("heading");
           return (
             <div className="font-bold text-2xl ">
               {RichText.render(slice.primary.header_rich_text_field)}
             </div>
-          );
+          )
         } else if (slice.slice_type === "paragraph_slice") {
           return (
             <div className="text-justify text-2xl">
@@ -35,15 +34,16 @@ class Slices extends React.Component {
                 linkResolver
               )}
             </div>
-          );
+          )
         } else if (slice.slice_type === "code_slice") {
           return (
             <div className="relative">
               <Snippet code={RichText.asText(slice.primary.cod_text_field)} />
             </div>
-          );
+          )
         }
-      });
+        return null
+      })
       return pageContent;
     }
   }
