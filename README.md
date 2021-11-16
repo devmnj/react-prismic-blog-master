@@ -21,5 +21,10 @@ npm install
 ```
 ## Run the project
 You can run the project using the *npm start* script.
+
+# Escape
+
+I used redux toolkit in the project, it does work while development. I trying to deploy on Vercel, it didn't make. **I need a hand for fix the issue**. 
 ## More guides on Prismic
+
 More guide on Prismic CMS can be found on [Javascript Superuser](http://javascriptsu.wordpress.com/tag/prismic) blog
