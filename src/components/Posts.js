@@ -13,9 +13,7 @@ export default function AllPosts() {
   if (!posts) return (<div className="min-h-screen">
     <Dots />
   </div>);
-  // console.log(allPostData);
-  // console.log(posts.results.filter((p)=>p.uid===slug));
-
+   
   return (
     <div className="bg-blue-100 min-h-screen p-12">
       <div className="container mx-auto">

@@ -2,6 +2,7 @@
   "name": "react-prismic-blog",
   "version": "0.1.0",
   "private": false,
+  "license": "MIT",
   "dependencies": {
     "@prismicio/client": "^5.1.0",
     "@reduxjs/toolkit": "^1.6.1",
