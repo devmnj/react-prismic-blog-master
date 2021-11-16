@@ -42,7 +42,9 @@ class Slices extends React.Component {
             </div>
           )
         }
-        return null
+        else{
+          return null
+        }
       })
       return pageContent;
     }
