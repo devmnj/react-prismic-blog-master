@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { PrismicClient, Prismic } from '../prismic-config';
 import {  RichText } from 'prismic-reactjs'
 import Dots from './loaders/minimalist/Dots';
 import { useSelector, useDispatch } from 'react-redux'
 import {getPosts} from "../redux/posts"
+import React from 'react';
 
 export default function AllPosts() {
   const dispatch = useDispatch();

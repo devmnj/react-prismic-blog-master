@@ -3,12 +3,10 @@ import { PrismicClient } from "../prismic-config.js";
 import { RichText } from "prismic-reactjs";
 import { useParams } from "react-router-dom";
 import Snippet from "./Snippet";
-import { useSelector, useDispatch } from "react-redux";
 import { DiscussionEmbed } from "disqus-react";
 import Wave from "./loaders/minimalist/Wave.js";
 import { getPost } from "../redux/article.js";
-import { getPosts } from "../redux/posts.js";
-
+import { useDispatch } from "react-redux";
 const linkResolver = (doc) => {
   // Pretty URLs for known types
   //console.log('slug->'+doc.slug);
@@ -54,13 +52,10 @@ class Slices extends React.Component {
 export default   function SinglePost() {
   const { slug } = useParams();
 
-  const { postData11 } = JSON.stringify(useSelector((state) => state.article));
+  // const { postData11 } = JSON.stringify(useSelector((state) => state.article));
   const dispatch = useDispatch();
    dispatch(getPost(slug))
-   
-      
-
-
+  
   const [postData, setPost] = useState(null);
   useEffect(() => {
     const fetch = async () => {

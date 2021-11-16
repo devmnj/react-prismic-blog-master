@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
-import { PrismicClient, Prismic } from '../prismic-config';
+import { PrismicClient } from '../prismic-config';
 
 export const getPost= createAsyncThunk('post/getPost',async (slug)=>{
   const res = await PrismicClient.getByUID("post_type", slug);
